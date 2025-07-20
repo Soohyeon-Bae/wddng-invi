@@ -103,23 +103,32 @@ const Location = () => {
         className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <Content>
-        대구 수성구 두산동 888-2번지
+        경기 수원시 팔달구 덕영대로 902
         <br />
-        호텔수성 수성스퀘어 3층 피오니홀
+        노보텔 앰배서더 수원 2층 샴페인홀
         <br />
         <br />
         <Title>버스 이용시</Title>
         <br />
         <br />
-        410-1, 401 호텔수성 앞 하차
-        <br />
-        수성1-1, 수성3-1, 814 TBC방송국 앞 하차
+        수원역.노보탤수원 정류장 하차
         <br />
         <br />
         <Title>지하철 이용시</Title>
         <br />
         <br />
-        3호선 수성못역 하차 (도보 10분)
+        1호선, 수인분당선 수원역 하차 (4번 출구)
+        <br />
+        <br />
+        <Title>기차 이용시</Title>
+        <br />
+        <br />
+        수원역 하차
+        <Title>자가용 이용시</Title>
+        <br />
+        <br />
+        노보텔 앰배서더 수원: 경기 수원시 팔달구 덕영대로 902번지
+        (호텔 정면 출입구 혹은 후면 주차장 진입로를 통해 출입하실 수 있습니다.)
       </Content>
     </Wrapper>
   );
