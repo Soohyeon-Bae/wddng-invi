@@ -1,5 +1,5 @@
-export const WEDDING_INVITATION_URL = "http://localhost:8000/";
-export const KAKAOTALK_API_TOKEN = "JavaScript 키 입력";
+export const WEDDING_INVITATION_URL = "https://suesweddinginvitation.netlify.app/";
+export const KAKAOTALK_API_TOKEN = "9a253454f567a614d58c036ad7463f85";
 export const KAKAOTALK_SHARE_IMAGE =
   "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_960_720.jpg";
 
