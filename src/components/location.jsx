@@ -17,6 +17,13 @@ const Title = styled.span`
   margin-bottom: 0;
 `;
 
+const Highlight = styled.span`
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0.85;
+  margin-bottom: 0;
+`;
+
 const Image = styled.img`
   display: block;
   margin: 0 auto;
@@ -103,35 +110,29 @@ const Location = () => {
         className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <Content>
-        경기 수원시 팔달구 덕영대로 902
+        <Highlight>노보텔 앰배서더 수원 2층 샴페인홀</Highlight>
         <br />
-        노보텔 앰배서더 수원 2층 샴페인홀
+        경기 수원시 팔달구 덕영대로 902
         <br />
         <br />
         <Title>버스 이용시</Title>
         <br />
-        <br />
-        수원역.노보탤수원 정류장 하차
+        수원역.노보텔수원 정류장 하차
         <br />
         <br />
         <Title>지하철 이용시</Title>
-        <br />
         <br />
         1호선, 수인분당선 수원역 하차 (4번 출구)
         <br />
         <br />
         <Title>기차 이용시</Title>
         <br />
-        <br />
         수원역 하차
         <br />
         <br />
         <Title>자가용 이용시</Title>
         <br />
-        <br />
-        노보텔 앰배서더 수원: 경기 수원시 팔달구 덕영대로 902
-        <br />
-        (호텔 정면 출입구 혹은 후면 주차장 진입로를 통해 출입하실 수 있습니다.)
+        노보텔 앰배서더 수원: 경기 수원시 팔달구 덕영대로 902 (호텔 정면 출입구 혹은 후면 주차장 진입로를 통해 출입하실 수 있습니다.)
       </Content>
     </Wrapper>
   );

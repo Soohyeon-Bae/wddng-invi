@@ -76,7 +76,7 @@ const Gallery = () => {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>우리의 아름다운 순간</Title>
+        <Title>Wedding Gallary</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}
