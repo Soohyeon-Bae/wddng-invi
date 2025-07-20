@@ -3,12 +3,16 @@ import ImageGallery from "react-image-gallery";
 import { Divider } from "antd";
 import styled from "styled-components";
 
-import GalleryPhoto1 from "../assets/Gallery_Photo_1.webp";
-import GalleryPhoto2 from "../assets/Gallery_Photo_2.webp";
-import GalleryPhoto3 from "../assets/Gallery_Photo_3.webp";
-import GalleryPhoto4 from "../assets/Gallery_Photo_4.webp";
-import GalleryPhoto5 from "../assets/Gallery_Photo_5.webp";
-import GalleryPhoto6 from "../assets/Gallery_Photo_6.webp";
+import GalleryPhoto1 from "../assets/photo1.jpg";
+import GalleryPhoto2 from "../assets/photo2.jpg";
+import GalleryPhoto3 from "../assets/photo3.jpg";
+import GalleryPhoto4 from "../assets/photo4.jpg";
+import GalleryPhoto5 from "../assets/photo5.jpg";
+import GalleryPhoto6 from "../assets/photo6.jpg";
+import GalleryPhoto7 from "../assets/photo7.jpg";
+import GalleryPhoto8 from "../assets/photo8.jpg";
+import GalleryPhoto9 from "../assets/photo9.jpg";
+import GalleryPhoto10 from "../assets/photo10.jpg";
 
 const Wrapper = styled.div`
   padding-top: 42px;
@@ -49,6 +53,22 @@ const images = [
   {
     original: GalleryPhoto6,
     thumbnail: GalleryPhoto6,
+  },
+    {
+    original: GalleryPhoto7,
+    thumbnail: GalleryPhoto7,
+  },
+    {
+    original: GalleryPhoto8,
+    thumbnail: GalleryPhoto8,
+  },
+    {
+    original: GalleryPhoto9,
+    thumbnail: GalleryPhoto9,
+  },
+    {
+    original: GalleryPhoto10,
+    thumbnail: GalleryPhoto10,
   },
 ];
 
