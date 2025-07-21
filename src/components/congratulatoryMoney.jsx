@@ -87,11 +87,11 @@ const CongratulatoryMoney = () => {
         plain
         style={{ marginTop: 0, marginBottom: 32 }}
       >
-        <Title>축하의 마음을 전하세요</Title>
+        <Title>마음 전하실 곳</Title>
       </Divider>
       <Image src={Flower} />
       <Content data-aos="fade-up">
-        축하의 마음을 담아 축의금을 전달해 보세요.
+        소중한 마음을 전해 주시는 분들을 위해 조심스레 마음을 담을 곳을 마련했습니다. 늘 고마움을 잊지 않겠습니다.
       </Content>
 
       <ButtonWrap>
