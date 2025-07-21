@@ -13,7 +13,7 @@ import {
 } from "../../config";
 
 const Wrapper = styled.div`
-  padding-top: 42px;
+  padding-top: 21px;
   width: 100%;
   text-align: center;
 `;
@@ -106,7 +106,7 @@ const Share = () => {
         plain
         style={{ marginTop: 0, marginBottom: 16 }}
       >
-        <Title>청첩장 공유하기</Title>
+        <Title>청첩장 공유를 원하시면 아래를 눌러주세요.</Title>
       </Divider>
       <KakaoTalkShareButton
         style={{ margin: 0 }}

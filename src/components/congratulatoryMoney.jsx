@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Button, Divider, message, Modal } from "antd";
-import { CheckCircleTwoTone } from "@ant-design/icons";
+// CheckCircleTwoTone 아이콘은 더 이상 사용하지 않으므로 임포트에서 제거합니다.
+// import { CheckCircleTwoTone } from "@ant-design/icons";
 import styled from "styled-components";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Flower from "../assets/flower3.png";
+
+// 사용할 이미지 파일들을 임포트합니다. 실제 파일 경로와 이름으로 바꿔주세요.
+import GroomConfirmIcon from "../assets/GroomImageIcon.png"; // 예: 신랑측 전용 이미지
+import BrideConfirmIcon from "../assets/BrideImageIcon.jpg"; // 예: 신부측 전용 이미지
+
 import {
   GROOM_NAME,
   GROOM_ACCOUNT_NUMBER,
@@ -67,6 +73,11 @@ const ContactButton = styled.div`
   width: 10.75rem;
   border: 1px solid #efddde;
   padding: 2.188rem 0;
+  display: flex; /* 내부 요소들을 정렬하기 위해 flex 사용 */
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 (내부 콘텐츠가 남는 경우) */
+  cursor: pointer; /* 클릭 가능한 요소임을 표시 */
 `;
 
 const Image = styled.img`
@@ -74,6 +85,14 @@ const Image = styled.img`
   margin: 0 auto;
   width: 1.375rem;
   padding-bottom: 42px;
+`;
+
+// 커스텀 이미지를 위한 스타일드 컴포넌트 추가
+const CustomIconImage = styled.img`
+  width: 64px; /* 기존 CheckCircleTwoTone의 fontSize와 비슷하게 맞춤 */
+  height: 64px;
+  margin-bottom: 16px;
+  object-fit: contain; /* 이미지가 잘리지 않도록 조절 */
 `;
 
 const CongratulatoryMoney = () => {
@@ -91,24 +110,20 @@ const CongratulatoryMoney = () => {
       </Divider>
       <Image src={Flower} />
       <Content data-aos="fade-up">
-        소중한 마음을 전해 주시는 분들을 위해 조심스레 마음을 담을 곳을 마련했습니다. 늘 고마움을 잊지 않겠습니다.
+        소중한 마음을 전해 주시는 분들을 위해 조심스레 마음을 담을 곳을 마련했습니다. 
+        <br />
+        늘 고마움을 잊지 않겠습니다.
       </Content>
 
       <ButtonWrap>
         <ContactButton data-aos="fade-up" onClick={() => setGroomVisible(true)}>
-          <CheckCircleTwoTone
-            style={{ fontSize: 64, marginBottom: 16 }}
-            twoToneColor="#829fe0"
-          />
-          <br />
+          {/* 신랑측 아이콘을 커스텀 이미지로 대체 */}
+          <CustomIconImage src={GroomConfirmIcon} alt="신랑측 계좌 확인 아이콘" />
           <SubContent>신랑측 계좌번호 확인</SubContent>
         </ContactButton>
         <ContactButton data-aos="fade-up" onClick={() => setBrideVisible(true)}>
-          <CheckCircleTwoTone
-            style={{ fontSize: 64, marginBottom: 16 }}
-            twoToneColor="#fe7daf"
-          />
-          <br />
+          {/* 신부측 아이콘을 커스텀 이미지로 대체 */}
+          <CustomIconImage src={BrideConfirmIcon} alt="신부측 계좌 확인 아이콘" />
           <SubContent>신부측 계좌번호 확인</SubContent>
         </ContactButton>
       </ButtonWrap>
@@ -118,7 +133,7 @@ const CongratulatoryMoney = () => {
         onOk={() => setGroomVisible(false)}
         onCancel={() => setGroomVisible(false)}
         footer={[
-          <Description>
+          <Description key="groom-desc">
             계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
           </Description>,
         ]}
@@ -169,7 +184,7 @@ const CongratulatoryMoney = () => {
         onOk={() => setBrideVisible(false)}
         onCancel={() => setBrideVisible(false)}
         footer={[
-          <Description>
+          <Description key="bride-desc">
             계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
           </Description>,
         ]}
@@ -188,7 +203,7 @@ const CongratulatoryMoney = () => {
           </CopyToClipboard>
         </div>
         <div style={{ marginTop: 24, marginBottom: 24 }}>
-          <b>모 :{BRIDE_MOTHER_NAME}</b>
+          <b>모 : {BRIDE_MOTHER_NAME}</b>
           <Divider type="vertical" />
           <CopyToClipboard text={BRIDE_MOTHER_ACCOUNT_NUMBER}>
             <Button

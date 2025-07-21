@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 
 const Title = styled.span`
   font-size: 0.875rem;
-  color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
@@ -19,6 +18,7 @@ const Title = styled.span`
 
 const Highlight = styled.span`
   font-size: 1rem;
+  color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
@@ -37,12 +37,13 @@ const Content = styled.p`
   opacity: 0.75;
   width: 100%;
   text-align: center;
+  padding-top: 32px;
   margin-bottom: 16px;
 `;
 
 const Map = styled.div`
   width: 100%;
-  height: 300
+  height: 100%;
   padding: 0;
 `;
 
