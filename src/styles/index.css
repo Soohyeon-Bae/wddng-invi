@@ -1,13 +1,25 @@
+/* styles/index.css */
+
+/* --- Google Fonts에서 "Gowun Batang" 폰트를 @import 방식으로 불러옵니다. --- */
+/* @import 규칙은 CSS 파일의 가장 위에 위치해야 합니다. */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+/* 'display=swap'은 폰트 로딩 중에도 텍스트가 바로 표시되도록 하여 사용자 경험을 향상시킵니다. */
+/* 필요한 경우 'Noto Serif KR'도 @import 해야 한다면 아래와 같이 추가할 수 있습니다. */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap'); */
+
 :root {
-  --title-color: #0F2557;
+  --title-color: #0F2557; /* 타이틀 색상 유지 */
 }
+
+/* --- 프로젝트 내 모든 글씨체의 기본 폰트를 "Gowun Batang"으로 설정합니다. --- */
+/* Gowun Batang이 로드되지 않을 경우 Noto Serif KR, 그리고 시스템 기본 서체 순으로 적용됩니다. */
 * {
-  font-family: "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont,
+  font-family: "Gowun Batang", "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* 카카오맵 버튼 없애기 */
+/* 카카오맵 버튼 없애기 (기존 코드 유지) */
 .wrap_controllers {
   display: none !important;
 }
@@ -23,6 +35,7 @@
   display: none !important;
 }
 
+/* Keyframe 애니메이션 (기존 코드 유지) */
 @keyframes fadein {
   from {
     opacity: 0;
@@ -59,7 +72,9 @@
   }
 }
 
-/* 폰트 적용 */
+/* 'mom_to_daughter' 폰트 적용 (기존 코드 유지) */
+/* 이 @font-face 규칙은 Gowun Batang과 별개로 작동합니다. */
+/* mom_to_daughter 폰트를 사용하려는 특정 요소에만 해당 폰트 패밀리를 지정해야 합니다. */
 @font-face {
   font-family: "mom_to_daughter";
   src: url("../assets/fonts/mom_to_daughter.woff2") format("woff2"),
