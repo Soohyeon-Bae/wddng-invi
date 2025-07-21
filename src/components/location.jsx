@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
@@ -32,18 +32,17 @@ const Image = styled.img`
 `;
 
 const Content = styled.p`
-  font-size: 0.875rem;
+  font-size: 0.72rem;
   line-height: 1.75;
   opacity: 0.75;
   width: 100%;
   text-align: center;
-  padding-top: 42px;
-  padding-bottom: 42px;
-  margin: 0;
+  margin-bottom: 16px;
 `;
 
 const Map = styled.div`
   width: 100%;
+  height: 300
   padding: 0;
 `;
 
@@ -106,7 +105,7 @@ const Location = () => {
       </Divider>
       <Image src={Flower} />
       <Map
-        id="daumRoughmapContainer1652464367301"
+        id="daumRoughmapContainer1752994469016"
         className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <Content>

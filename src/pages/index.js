@@ -64,7 +64,7 @@ const IndexPage = () => {
           textAlign: "center",
         }}
       >
-        Copyright © 2022 Shin Jooyoung
+        © Shin Jooyoung 2022. Customization © Soohyeon-Bae 2025. All rights reserved.
       </Footer>
     </Wrapper>
   );

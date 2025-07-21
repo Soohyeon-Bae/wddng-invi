@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 0rem;
+  font-size: 0.72rem;
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
@@ -104,7 +104,7 @@ const Share = () => {
       <Divider
         data-aos="fade-up"
         plain
-        style={{ marginTop: 0, marginBottom: 32 }}
+        style={{ marginTop: 0, marginBottom: 16 }}
       >
         <Title>청첩장 공유하기</Title>
       </Divider>
