@@ -9,6 +9,14 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
+const Title_1 = styled.span`
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--title-color);
+  opacity: 0.85;
+  margin-bottom: 0;
+`;
+
 const Title = styled.span`
   font-size: 0.875rem;
   font-weight: bold;
@@ -43,6 +51,7 @@ const Content = styled.p`
 
 const Map = styled.div`
   width: 100%;
+  max-width: 640px; /* 최대 너비 설정으로 PC에서 너무 넓어지지 않게 합니다. */
   height: 100%;
   padding: 0;
 `;
@@ -102,7 +111,7 @@ const Location = () => {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>오시는 길</Title>
+        <Title_1>오시는 길</Title_1>
       </Divider>
       <Image src={Flower} />
       <Map

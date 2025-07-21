@@ -18,7 +18,7 @@ import GalleryPhoto10 from "../assets/photo10.jpg";
 // 만약 더 많은 사진이 있다면 여기에 추가 import 해주세요 (ex: GalleryPhoto11, GalleryPhoto12 ...)
 
 const Wrapper = styled.div`
-  padding-top: 42px;
+  padding-top: 63px;
   width: 90%; /* 화면 너비에 맞춰 조정 */
   max-width: 640px; /* 최대 너비 설정으로 PC에서 너무 넓어지지 않게 합니다. */
   margin: 0 auto;
@@ -33,9 +33,8 @@ const Title = styled.p`
   text-align: center;
 `;
 
-// 기존 images 배열을 그대로 사용합니다.
-// 이 배열은 이제 Gallery 컴포넌트에서 썸네일을 만들고, ImageModal 컴포넌트로도 전달됩니다.
-const IMAGES = [
+// 기존 'IMAGES' 배열에 'export' 키워드를 추가하여 외부에서 가져올 수 있도록 합니다.
+export const IMAGES = [ // <-- 이곳에 'export' 키워드를 추가했습니다.
   { original: GalleryPhoto1, thumbnail: GalleryPhoto1 },
   { original: GalleryPhoto2, thumbnail: GalleryPhoto2 },
   { original: GalleryPhoto3, thumbnail: GalleryPhoto3 },
