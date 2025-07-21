@@ -8,7 +8,7 @@ import Flower from "../assets/flower3.png";
 
 // 사용할 이미지 파일들을 임포트합니다. 실제 파일 경로와 이름으로 바꿔주세요.
 import GroomConfirmIcon from "../assets/GroomImageIcon.png"; // 예: 신랑측 전용 이미지
-import BrideConfirmIcon from "../assets/BrideImageIcon.jpg"; // 예: 신부측 전용 이미지
+import BrideConfirmIcon from "../assets/BrideImageIcon.png"; // 예: 신부측 전용 이미지
 
 import {
   GROOM_NAME,
