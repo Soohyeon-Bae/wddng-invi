@@ -1,7 +1,7 @@
 export const WEDDING_INVITATION_URL = "https://suesweddinginvitation.netlify.app/";
 export const KAKAOTALK_API_TOKEN = "9a253454f567a614d58c036ad7463f85";
 export const KAKAOTALK_SHARE_IMAGE =
-  "https://hosooweddinginvitation.netlify.app/assets/thumbnail.jpg";
+  "https://hosooweddinginvitation.netlify.app/thumbnail.jpg";
 
 export const WEDDING_DATE = "2025년 12월 21일(일) 오전 11시 30분";
 export const WEDDING_LOCATION = "노보텔 앰배서더 수원";

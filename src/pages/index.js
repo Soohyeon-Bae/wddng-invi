@@ -142,23 +142,13 @@ export const Head = () => (
     {/* 오픈 그래프(Open Graph) 메타 태그들 */}
     {/* og:url은 실제 배포된 사이트 URL로 변경해주세요. */}
     <meta property="og:url" content="https://hosooweddinginvitation.netlify.app" />
-    <meta property="og:title" content="호상♥수현 결혼식에 초대합니다" />
+    <meta property="og:title" content="윤호상❤배수현 결혼식에 초대합니다" />
     <meta property="og:type" content="website" />
     {/* og:image 경로는 Netlify 배포 후 실제로 접근 가능한 thumbnail.jpg의 정확한 URL을 넣어주세요. */}
     {/* (만약 public/assets/thumbnail.jpg에 두셨고 빌드 후에도 그 경로라면 아래와 같이 사용) */}
-    <meta property="og:image" content="https://hosooweddinginvitation.netlify.app/assets/thumbnail.jpg" />
-    <meta property="og:description" content="저희 두 사람이 사랑과 믿음으로 하나되어 소중한 분들을 모시고 결혼식을 올립니다. 귀한 걸음 하시어 저희의 새로운 시작을 축복해 주시면 감사하겠습니다." />
-    <meta property="og:site_name" content="호수♥정선 청첩장" />
-
-    {/* 트위터 카드 메타 태그 (선택 사항, 트위터 공유 시 사용) */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="호상♥수현 결혼식에 초대합니다" />
-    <meta name="twitter:description" content="저희 두 사람이 사랑과 믿음으로 하나되어 소중한 분들을 모시고 결혼식을 올립니다." />
-    {/* og:image와 동일한 경로 사용 */}
-    <meta name="twitter:image" content="https://hosooweddinginvitation.netlify.app/assets/thumbnail.jpg" />
-
-    {/* 일반적인 HTML meta description (검색 엔진 최적화용) */}
-    <meta name="description" content="호상과 수현의 온라인 청첩장입니다. 저희의 결혼식을 축복해주세요." />
+    <meta property="og:image" content="https://hosooweddinginvitation.netlify.app/thumbnail.jpg" />
+    <meta property="og:description" content="귀한 걸음 하시어 저희의 새로운 시작을 축복해 주시면 감사하겠습니다🤵👰" />
+    <meta property="og:site_name" content="호상♥수현 청첩장" />
 
   </>
 );
