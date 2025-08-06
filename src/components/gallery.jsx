@@ -15,6 +15,26 @@ import GalleryPhoto7 from "../assets/photo7.jpg";
 import GalleryPhoto8 from "../assets/photo8.jpg";
 import GalleryPhoto9 from "../assets/photo9.jpg";
 import GalleryPhoto10 from "../assets/photo10.jpg";
+import GalleryPhoto11 from "../assets/photo11.jpg";
+import GalleryPhoto12 from "../assets/photo12.jpg";
+import GalleryPhoto13 from "../assets/photo13.jpg";
+import GalleryPhoto14 from "../assets/photo14.jpg";
+import GalleryPhoto15 from "../assets/photo15.jpg";
+import GalleryPhoto16 from "../assets/photo16.jpg";
+import GalleryPhoto17 from "../assets/photo17.jpg";
+import GalleryPhoto18 from "../assets/photo18.jpg";
+import GalleryPhoto19 from "../assets/photo19.jpg";
+import GalleryPhoto20 from "../assets/photo20.jpg";
+import GalleryPhoto21 from "../assets/photo21.jpg";
+import GalleryPhoto22 from "../assets/photo22.jpg";
+import GalleryPhoto23 from "../assets/photo23.jpg";
+import GalleryPhoto24 from "../assets/photo24.jpg";
+import GalleryPhoto25 from "../assets/photo25.jpg";
+import GalleryPhoto26 from "../assets/photo26.jpg";
+import GalleryPhoto27 from "../assets/photo27.jpg";
+import GalleryPhoto28 from "../assets/photo28.jpg";
+import GalleryPhoto29 from "../assets/photo29.jpg";
+import GalleryPhoto30 from "../assets/photo30.jpg";
 // 만약 더 많은 사진이 있다면 여기에 추가 import 해주세요 (ex: GalleryPhoto11, GalleryPhoto12 ...)
 
 const Wrapper = styled.div`
@@ -45,14 +65,34 @@ export const IMAGES = [ // <-- 이곳에 'export' 키워드를 추가했습니�
   { original: GalleryPhoto8, thumbnail: GalleryPhoto8 },
   { original: GalleryPhoto9, thumbnail: GalleryPhoto9 },
   { original: GalleryPhoto10, thumbnail: GalleryPhoto10 },
+  { original: GalleryPhoto11, thumbnail: GalleryPhoto11 },
+  { original: GalleryPhoto12, thumbnail: GalleryPhoto12 },
+  { original: GalleryPhoto13, thumbnail: GalleryPhoto13 },
+  { original: GalleryPhoto14, thumbnail: GalleryPhoto14 },
+  { original: GalleryPhoto15, thumbnail: GalleryPhoto15 },
+  { original: GalleryPhoto16, thumbnail: GalleryPhoto16 },
+  { original: GalleryPhoto17, thumbnail: GalleryPhoto17 },
+  { original: GalleryPhoto18, thumbnail: GalleryPhoto18 },
+  { original: GalleryPhoto19, thumbnail: GalleryPhoto19 },
+  { original: GalleryPhoto20, thumbnail: GalleryPhoto20 },
+  { original: GalleryPhoto21, thumbnail: GalleryPhoto21 },
+  { original: GalleryPhoto22, thumbnail: GalleryPhoto22 },
+  { original: GalleryPhoto23, thumbnail: GalleryPhoto23 },
+  { original: GalleryPhoto24, thumbnail: GalleryPhoto24 },
+  { original: GalleryPhoto25, thumbnail: GalleryPhoto25 },
+  { original: GalleryPhoto26, thumbnail: GalleryPhoto26 },
+  { original: GalleryPhoto27, thumbnail: GalleryPhoto27 },
+  { original: GalleryPhoto28, thumbnail: GalleryPhoto28 },
+  { original: GalleryPhoto29, thumbnail: GalleryPhoto29 },
+  { original: GalleryPhoto30, thumbnail: GalleryPhoto30 },
   // 20장을 채우려면 여기에 이미지를 더 추가해주세요.
   // 예시: { original: GalleryPhoto11, thumbnail: GalleryPhoto11 },
 ];
 
 const ThumbnailGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4열 그리드 */
-  gap: 8px; /* 썸네일 간 간격 */
+  grid-template-columns: repeat(6, 1fr); /* 6열 그리드 */
+  gap: 4px; /* 썸네일 간 간격 */
   margin-top: 20px;
   padding-bottom: 42px;
 `;
@@ -84,7 +124,7 @@ const ThumbnailImage = styled.img`
 const Gallery = ({ onThumbnailClick }) => {
   // IMAGES 배열에서 최대 20개의 썸네일만 표시합니다.
   // 현재 10개의 이미지만 있으므로 10개가 모두 표시됩니다.
-  const thumbnailsToShow = IMAGES.slice(0, 20);
+  const thumbnailsToShow = IMAGES.slice(0, 30);
 
   return (
     <Wrapper data-aos="fade-up">
