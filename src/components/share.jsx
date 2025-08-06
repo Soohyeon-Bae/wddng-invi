@@ -74,7 +74,7 @@ const Share = () => {
         content: {
           title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
           description: "직접 만들었습니다. 아래 '청첩장 열기'를 눌러 읽어주세요🤵👰",
-          imageUrl: "https://hosooweddinginvitation.netlify.app/assets/thumbnail.jpg",
+          imageUrl: KAKAOTALK_SHARE_IMAGE,
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,

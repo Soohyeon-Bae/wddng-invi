@@ -110,7 +110,7 @@ const CongratulatoryMoney = () => {
       </Divider>
       <Image src={Flower} />
       <Content data-aos="fade-up">
-        소중한 마음을 전해 주시는 분들을 위해 조심스레 마음을 담을 곳을 마련했습니다. 
+        소중한 마음 전해 주시는 분들을 위해 조심스레 마음 담을 곳을 마련했습니다. 
         <br />
         늘 고마움을 잊지 않겠습니다.
       </Content>
