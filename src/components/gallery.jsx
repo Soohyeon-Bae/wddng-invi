@@ -113,8 +113,7 @@ const ThumbnailImage = styled.img`
 
 // 부모(IndexPage)로부터 onThumbnailClick 이벤트를 props로 받습니다.
 const Gallery = ({ onThumbnailClick }) => {
-  // IMAGES 배열에서 최대 20개의 썸네일만 표시합니다.
-  // 현재 10개의 이미지만 있으므로 10개가 모두 표시됩니다.
+  // IMAGES 배열에서 최대 25개의 썸네일만 표시합니다.
   const thumbnailsToShow = IMAGES.slice(0, 25);
 
   return (
