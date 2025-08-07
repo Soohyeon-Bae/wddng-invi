@@ -1,13 +1,12 @@
 This project is a fork of [WEDDING_INVITATION](https://github.com/S-jooyoung/WEDDING_INVITATION).
 It includes custom modifications for my upcoming winter wedding ceremony.
 
-My Custom Modifications / Changes
+## My Custom Modifications / Changes
 This fork includes the following changes compared to the original project:
-
-Interactive Photo Album: Implemented a responsive lightbox/modal pop-up feature for the photo album, allowing images to display dynamically on top of the current page upon click, with the background subtly dimmed.
-Dynamic Snowfall Effect: Introduced a subtle yet dynamic snowfall visual effect across the application for an enhanced aesthetic experience.
-
---
+- **Interactive Photo Album**: Implemented a responsive lightbox/modal pop-up feature for the photo album, allowing images to display dynamically on top of the current page upon click, with the background subtly dimmed.
+- **Dynamic Snowfall Effect**: Introduced a subtle yet dynamic snowfall visual effect across the application for an enhanced aesthetic experience.
+  
+---
 
 # 모바일 청첩장 React.js 템플릿
 
