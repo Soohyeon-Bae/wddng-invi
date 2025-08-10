@@ -32,22 +32,59 @@ const VideoBackground = styled.video`
 `;
 
 const WeddingInvitation = styled.p`
-  font-size: 0.825rem;
+  /* font-size: 0.825rem; */
   opacity: 0.45;
   margin-bottom: 16px;
+
+  font-size: 1.2vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const GroomBride = styled.p`
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-weight: bold;
   opacity: 0.9;
   margin-bottom: 16px;
+
+  font-size: 1.2vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
+
 `;
 
 const Schedule = styled.p`
-  font-size: 1.06rem;
+  /* font-size: 1.06rem; */
   opacity: 0.65;
   margin-bottom: 24px;
+
+  font-size: 1.2vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 const Title = () => {
   return (
