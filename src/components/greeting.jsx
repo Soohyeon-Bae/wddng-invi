@@ -28,14 +28,14 @@ const Title = styled.p`
 
 const Content = styled.p`
   /* 기존 스타일 유지 */
-  /* font-size: 0.875rem; */
+  font-size: 0.875rem;
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 16px;
   width: 100%;
   text-align: center;
 
-  /* --- 이 부분을 추가/수정하여 반응형 글자 크기를 적용합니다. --- */
+  /*/* --- 이 부분을 추가/수정하여 반응형 글자 크기를 적용합니다. --- */
 
   /* 기본 (큰 화면) 에서의 글자 크기: 뷰포트 너비의 2.2% */
   /* 0.875rem은 약 14px인데, 2.2vw는 대략 1920px 화면에서 42px 정도 됩니다.
@@ -53,14 +53,14 @@ const Content = styled.p`
     /* 화면 너비가 768px 이하일 때 글자 크기 조정 */
     /* 모바일에서는 vw 단위를 너무 작게 설정하면 글자가 안 보일 수 있으므로
        적절한 vw 값을 찾아주시거나, rem 또는 px 단위로 고정할 수도 있습니다. */
-    font-size: 3.5vw; /* 예를 들어, 360px 모바일 화면에서 약 12.6px */
+    font-size: 1.7vw; /* 예를 들어, 360px 모바일 화면에서 약 12.6px */
     line-height: 1.6; /* 모바일에서 줄 간격 미세 조정 (선택 사항) */
   }
 
   @media screen and (max-width: 480px) {
     /* 더 작은 화면 (아주 작은 모바일)에 대한 추가 미디어 쿼리 */
-    font-size: 4vw; /* 예를 들어, 360px 모바일 화면에서 14.4px */
-  }
+    font-size: 2vw; /* 예를 들어, 360px 모바일 화면에서 14.4px */
+  } */
 `;
 
 const GroomBride = styled.p`
@@ -90,13 +90,17 @@ const Greeting = () => {
         매년 눈 내리는 겨울이 오면,
         <br />
         <br />
-        이 날의 사진첩을 꺼내보며 행복했던 기억을 떠올릴 것입니다.
+        이 날의 사진첩을 꺼내보며 행복했던 
+        <br/>
+        기억을 떠올릴 것입니다.
         <br />
         <br />
         그 때, 그 사진 속에,
         <br />
         <br />
-        함께 웃고 있는 여러분이 있었으면 좋겠습니다.
+        함께 웃고 있는 여러분이 있었으면 
+        <br/>
+        좋겠습니다.
         <br />
         <br />
       </Content>

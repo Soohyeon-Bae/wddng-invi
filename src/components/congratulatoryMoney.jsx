@@ -42,12 +42,12 @@ const Title = styled.p`
 `;
 
 const Content = styled.p`
-  /* font-size: 0.875rem; */
+  font-size: 0.875rem;
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 42px;
 
-  font-size: 0.6vw;
+  /* font-size: 0.6vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
@@ -57,7 +57,7 @@ const Content = styled.p`
 
   @media screen and (max-width: 480px) {
     font-size: 4vw;
-  }
+  } */
 `;
 
 const SubContent = styled.p`
@@ -122,7 +122,9 @@ const CongratulatoryMoney = () => {
       </Divider>
       <Image src={Flower} />
       <Content data-aos="fade-up">
-        소중한 마음을 전해 주시는 분들을 위해 조심스레 마음 담을 곳을 마련했습니다. 
+        소중한 마음을 전해 주시는 분들을 위해
+        <br/>
+        조심스레 마음 담을 곳을 마련했습니다. 
         <br />
         늘 고마움을 잊지 않겠습니다.
       </Content>
