@@ -50,12 +50,12 @@ const WeddingInvitation = styled.p`
 `;
 
 const GroomBride = styled.p`
-  /* font-size: 1.5rem; */
+  font-size: 1.5rem; 
   font-weight: bold;
   opacity: 0.9;
   margin-bottom: 16px;
 
-  font-size: 1.5vw;
+  /* font-size: 1.5vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
@@ -65,7 +65,7 @@ const GroomBride = styled.p`
 
   @media screen and (max-width: 480px) {
     font-size: 4vw;
-  }
+  } */
 
 `;
 

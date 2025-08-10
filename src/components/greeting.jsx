@@ -43,7 +43,7 @@ const Content = styled.p`
      vw를 너무 크게 주지 않도록 주의해주세요.
      예시: font-size: 0.6vw; 정도면 1920px 화면에서 약 23px 정도 됩니다.
      이 값은 qotn님의 디자인 의도에 맞춰 조절하셔야 합니다. */
-  font-size: 1.2vw; /* PC, 태블릿 등 넓은 화면에서 사용될 폰트 크기 비율 */
+  font-size: 0.6vw; /* PC, 태블릿 등 넓은 화면에서 사용될 폰트 크기 비율 */
   
   /* 한글 줄바꿈 시 단어가 잘리지 않도록 (권장) */
   word-break: keep-all;
