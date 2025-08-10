@@ -8,9 +8,9 @@ export const WEDDING_LOCATION = "노보텔 앰배서더 수원";
 
 export const GROOM_NAME = "윤호상";
 export const GROOM_ACCOUNT_NUMBER = "토스뱅크 1000-3052-7436";
-export const GROOM_FATHER_NAME = "❁윤성만";
+export const GROOM_FATHER_NAME = "❁ 윤성만";
 export const GROOM_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
-export const GROOM_MOTHER_NAME = "❁김소연";
+export const GROOM_MOTHER_NAME = "❁ 김소연";
 export const GROOM_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 
 export const BRIDE_NAME = "배수현";

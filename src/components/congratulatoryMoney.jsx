@@ -42,10 +42,22 @@ const Title = styled.p`
 `;
 
 const Content = styled.p`
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 42px;
+
+  font-size: 0.6vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const SubContent = styled.p`

@@ -55,7 +55,7 @@ const GroomBride = styled.p`
   opacity: 0.9;
   margin-bottom: 16px;
 
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
