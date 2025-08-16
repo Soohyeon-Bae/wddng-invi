@@ -49,22 +49,22 @@ const Title = styled.span`
 `;
 
 const Highlight = styled.span`
-  /* font-size: 1rem; */
+  /* font-size: 0.875rem; */
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
 
-  font-size: 1.36vw;
+  font-size: 1.19vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 4.2vw;
+    font-size: 3.8vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4.7vw;
+    font-size: 4.3vw;
   }
 `;
 
