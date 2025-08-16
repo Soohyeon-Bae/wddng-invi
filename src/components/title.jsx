@@ -40,12 +40,12 @@ const WeddingInvitation = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 3.6vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.1vw;
   }
 `;
 
@@ -59,12 +59,12 @@ const GroomBride = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 5.8vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 6.3vw;
   } 
 
 `;
@@ -78,12 +78,12 @@ const Schedule = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 4.4vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.9vw;
   }
 `;
 const Title = () => {

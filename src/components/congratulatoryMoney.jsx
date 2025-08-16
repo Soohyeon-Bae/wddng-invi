@@ -44,12 +44,12 @@ const Title = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 4.2vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.7vw;
   } 
 
 `;
@@ -64,12 +64,12 @@ const Content = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 3.8vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.3vw;
   } 
 `;
 
@@ -83,12 +83,12 @@ const SubContent = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 3.8vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.3vw;
   } 
 `;
 
@@ -102,12 +102,12 @@ const Description = styled.p`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 3.8vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.3vw;
   } 
 
 `;

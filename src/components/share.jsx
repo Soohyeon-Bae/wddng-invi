@@ -29,12 +29,12 @@ const Title = styled.span`
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 3.2vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 3.7vw;
   }
 `;
 
