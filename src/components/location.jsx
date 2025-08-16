@@ -175,16 +175,12 @@ const Location = () => {
 
   // 노보텔 앰배서더 수원 주소와 좌표
   const venueName = "노보텔 앰배서더 수원";
-  // venueLat, venueLng, venuePlaceId는 길찾기 또는 마커 표시에 활용될 수 있지만,
-  // 검색 결과 링크에서는 직접 사용되지 않습니다.
-  // const venueLat = "37.266205"; // 위도
-  // const venueLng = "126.999863"; // 경도
-  // const venuePlaceId = "11306354"; // 노보텔 앰배서더 수원 고유 ID
+  const venueLat = "37.266205"; // 위도
+  const venueLng = "126.999863"; // 경도
+  const venuePlaceId = "11306354"; // 노보텔 앰배서더 수원 고유 ID
 
-  // **변경 지점: 카카오 맵 링크를 장소 검색 모드로 변경**
-  // 장소 이름을 직접 검색어로 사용하여 카카오맵 검색 결과 페이지로 연결합니다.
-  const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(venueName)}`; 
-  // encodeURIComponent를 사용하여 한글 이름이 URL 인코딩되도록 합니다.
+  // **변경 지점: 카카오 맵 링크를 장소 ID 기반 '길찾기' 모드로 변경**
+  const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(venueName)}`;
  
   return (
     <Wrapper>
@@ -201,9 +197,49 @@ const Location = () => {
         target="_blank" // 새 탭 또는 새 창으로 열기
         rel="noopener noreferrer" // 보안을 위한 설정
         aria-label={`${venueName} 지도 보기`} // 스크린 리더를 위한 설명
+        // 모바일 환경에서 앱으로 바로 열리게 하려면 아래 딥링크를 시도할 수 있지만, 
+        // 앱이 설치되어 있지 않은 경우 오류가 발생할 수 있으므로 일반적으로 웹 링크를 fallback으로 사용합니다.
+        // onClick={(e) => { 
+        //   e.preventDefault(); 
+        //   window.location.href = kakaoAppUrl; // 앱 시도
+        //   setTimeout(() => { // 일정 시간 후 앱으로 열리지 않으면 웹으로 리다이렉트
+        //     window.location.href = kakaoMapUrl;
+        //   }, 1000); 
+        // }}
       >
-        <div id="roughmap_canvas_1752994469016" className="roughmap_canvas_class"></div>
+        <div
+          id="daumRoughmapContainer1752994469016"
+          className="root_daum_roughmap root_daum_roughmap_landing"
+        ></div>
       </MapContainerLink>
+
+      <Content>
+        <Highlight>노보텔 앰배서더 수원 2층 샴페인홀</Highlight>
+        <br />
+        경기 수원시 팔달구 덕영대로 902
+        <br />
+        <br />
+        <Title>버스 이용시</Title>
+        <br />
+        수원역.노보텔수원 정류장 하차
+        <br />
+        <br />
+        <Title>지하철 이용시</Title>
+        <br />
+        수원역(1호선,수인분당선) 하차 후 4번 출구 바로 앞
+        <br />
+        <br />
+        <Title>기차 이용시</Title>
+        <br />
+        수원역 하차 후 THE AK TOWN 2층 연결통로 이용
+        <br />
+        <br />
+        <Title>자가용 이용시</Title>
+        <br />
+        호텔 정면 주차장입구2 또는 후면 주차장입구1 이용
+        <br />
+        네비게이션 검색시 GATE 7번으로 진입
+      </Content>
     </Wrapper>
   );
 };
