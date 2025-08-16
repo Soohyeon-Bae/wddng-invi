@@ -180,7 +180,7 @@ const Location = () => {
   const venuePlaceId = "11306354"; // 노보텔 앰배서더 수원 고유 ID
 
   // **변경 지점: 카카오 맵 링크를 장소 ID 기반 '길찾기' 모드로 변경**
-  const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(venueName)}`;
+  const kakaoMapUrl = `https://www.kakaomap.com/search?q=${encodeURIComponent(venueName)}`;
  
   return (
     <Wrapper>
