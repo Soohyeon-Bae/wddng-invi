@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const Content = styled.span`
   display: block;
   margin: 0 auto;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   font-family: "mom_to_daughter";
   text-align: center;
   color: var(--title-color);
@@ -25,6 +25,18 @@ const Content = styled.span`
   background-image: url(${QuotePaper});
   background-repeat: no-repeat;
   background-position: center;
+
+  font-size: 1.76vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const Image = styled.img`

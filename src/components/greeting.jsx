@@ -18,31 +18,68 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
   text-align: center;
+  
+  font-size: 1.36vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  } 
 `;
 
 const Content = styled.p`
-  /* 기존 스타일 유지 */
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 16px;
   width: 100%;
   text-align: center;
+
+  font-size: 1.19vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  } 
+
 `;
 
 const GroomBride = styled.p`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   line-height: 1.75;
   opacity: 0.85;
   margin-bottom: 0px;
   width: 100%;
   text-align: center;
+
+  
+  font-size: 1.36vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  } 
 `;
 
 const Image = styled.img`
@@ -63,9 +100,9 @@ const Greeting = () => {
         매년 눈 내리는 겨울이 오면,
         <br />
         <br />
-        이 날의 사진첩을 꺼내보며 행복했던 
+        저희는 이 날의 사진첩을 꺼내보며  
         <br/>
-        기억을 떠올릴 것입니다.
+        가장 행복했던 기억을 떠올릴 것입니다.
         <br />
         <br />
         그 때, 그 사진 속에,

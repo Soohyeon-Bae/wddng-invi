@@ -36,7 +36,7 @@ const WeddingInvitation = styled.p`
   opacity: 0.45;
   margin-bottom: 16px;
 
-  font-size: 1.2vw;
+  font-size: 1.12vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
@@ -50,12 +50,12 @@ const WeddingInvitation = styled.p`
 `;
 
 const GroomBride = styled.p`
-  font-size: 1.5rem; 
+  /* font-size: 1.5rem; */ 
   font-weight: bold;
   opacity: 0.9;
   margin-bottom: 16px;
 
-  /* font-size: 1.5vw;
+  font-size: 2.04vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
@@ -65,7 +65,7 @@ const GroomBride = styled.p`
 
   @media screen and (max-width: 480px) {
     font-size: 4vw;
-  } */
+  } 
 
 `;
 
@@ -74,7 +74,7 @@ const Schedule = styled.p`
   opacity: 0.65;
   margin-bottom: 24px;
 
-  font-size: 1.2vw;
+  font-size: 1.44vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {

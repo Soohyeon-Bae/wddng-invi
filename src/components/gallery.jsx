@@ -42,12 +42,24 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
   text-align: center;
+
+  font-size: 1.36vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  } 
 `;
 
 // 기존 'IMAGES' 배열에 'export' 키워드를 추가하여 외부에서 가져올 수 있도록 합니다.

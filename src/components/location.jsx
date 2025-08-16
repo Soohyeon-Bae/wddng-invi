@@ -10,26 +10,62 @@ const Wrapper = styled.div`
 `;
 
 const Title_1 = styled.span`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: bold;
   color: var(--title-color);
   opacity: 0.85;
   margin-bottom: 0;
+
+  font-size: 1.36vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const Title = styled.span`
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
+
+  font-size: 1.19vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const Highlight = styled.span`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
+
+  font-size: 1.36vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const Image = styled.img`
@@ -40,13 +76,25 @@ const Image = styled.img`
 `;
 
 const Content = styled.p`
-  font-size: 0.72rem;
+  /* font-size: 0.72rem; */
   line-height: 1.75;
   opacity: 0.75;
   width: 100%;
   text-align: center;
   padding-top: 32px;
   margin-bottom: 16px;
+
+  font-size: 0.98vw;
+  word-break: keep-all;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 4vw;
+  }
 `;
 
 const Map = styled.div`
@@ -131,19 +179,19 @@ const Location = () => {
         <br />
         <Title>지하철 이용시</Title>
         <br />
-        1호선, 수인분당선 수원역 하차 (4번 출구)
+        수원역(1호선,수인분당선) 하차 후 4번 출구 바로 앞
         <br />
         <br />
         <Title>기차 이용시</Title>
         <br />
-        수원역 하차
+        수원역 하차 후 THE AK TOWN 2층 연결통로 이용
         <br />
         <br />
         <Title>자가용 이용시</Title>
         <br />
-        노보텔 앰배서더 수원: 경기 수원시 팔달구 덕영대로 902 
+        호텔 정면 주차장입구2 또는 후면 주차장입구1 이용
         <br />
-        (호텔 정면 출입구 혹은 후면 주차장 진입로를 통해 출입하실 수 있습니다.)
+        네비게이션 검색시 GATE 7번으로 진입
       </Content>
     </Wrapper>
   );
