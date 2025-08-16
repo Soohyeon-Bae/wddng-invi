@@ -4,7 +4,6 @@ export const KAKAOTALK_SHARE_IMAGE =
   "https://hosooweddinginvitation.netlify.app/thumbnail.jpg";
 
 export const WEDDING_DATE = "2025년 12월 21일 일요일 오전 11시 30분";
-export const WEDDING_TIME = "오전 11시 30분";
 export const WEDDING_LOCATION = "노보텔 앰배서더 수원";
 
 export const GROOM_NAME = "윤호상";

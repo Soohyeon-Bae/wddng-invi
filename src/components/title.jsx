@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {
   WEDDING_DATE,
-  WEDDING_TIME,
   WEDDING_LOCATION,
   GROOM_NAME,
   BRIDE_NAME,
@@ -71,20 +70,20 @@ const GroomBride = styled.p`
 `;
 
 const Schedule = styled.p`
-  /* font-size: 1rem; */
+  /* font-size: 0.875rem; */
   opacity: 0.65;
   margin-bottom: 24px;
 
-  font-size: 1.36vw;
+  font-size: 1.19vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 4.2vw;
+    font-size: 3.8vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4.7vw;
+    font-size: 4.3vw;
   }
 `;
 const Title = () => {
@@ -98,7 +97,7 @@ const Title = () => {
         <Schedule>
           {WEDDING_DATE}
           <br />
-          {WEDDING_TIME}, {WEDDING_LOCATION}
+          {WEDDING_LOCATION}
         </Schedule>
       </TitleWrapper>
       <VideoBackground autoPlay loop muted playsInline={true}>
