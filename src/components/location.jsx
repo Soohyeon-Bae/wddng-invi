@@ -183,7 +183,7 @@ const Location = () => {
   const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(venueName)}`;
  
   // 모바일 앱에서 직접 열릴 카카오맵 딥링크 검색 URL
-  const kakaoMapAppUrl = `kakaomap://search?q=${encodeURIComponent(venueName)}`;
+  const kakaoMapAppUrl = `kakaomap://place?id=${venuePlaceId}`;
 
   // 맵 클릭 시 실행될 함수
   const handleMapClick = (e) => {
@@ -201,7 +201,7 @@ const Location = () => {
     // 앱이 실행되면 이 setTimeout을 클리어할 수는 없지만,
     // 대부분의 경우 앱이 열리면 브라우저는 백그라운드로 가므로 크게 문제되지 않습니다.
   };
-  
+
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
