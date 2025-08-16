@@ -182,26 +182,6 @@ const Location = () => {
   // **변경 지점: 카카오 맵 링크를 장소 ID 기반 '길찾기' 모드로 변경**
   const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(venueName)}`;
  
-  // 모바일 앱에서 직접 열릴 카카오맵 딥링크 검색 URL
-  const kakaoMapAppUrl = `kakaomap://place?id=${venuePlaceId}`;
-
-  // 맵 클릭 시 실행될 함수
-  const handleMapClick = (e) => {
-    e.preventDefault(); // 기본 링크 동작 방지 (새 탭 열림 방지)
-
-    // 1. 딥링크로 앱 실행 시도
-    window.location.href = kakaoMapAppUrl;
-
-    // 2. 일정 시간 후 앱이 열리지 않으면 웹 페이지로 리다이렉트 (폴백)
-    // 모바일 브라우저 환경에서 앱이 없거나 앱으로 연결되지 않을 경우를 대비
-    const fallbackTimeout = setTimeout(() => {
-      window.location.href = kakaoMapWebUrl;
-    }, 1500); // 1.5초 후에도 앱이 열리지 않으면 웹으로 이동
-
-    // 앱이 실행되면 이 setTimeout을 클리어할 수는 없지만,
-    // 대부분의 경우 앱이 열리면 브라우저는 백그라운드로 가므로 크게 문제되지 않습니다.
-  };
-
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
