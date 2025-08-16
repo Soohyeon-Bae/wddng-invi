@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
   WEDDING_DATE,
+  WEDDING_TIME,
   WEDDING_LOCATION,
   GROOM_NAME,
   BRIDE_NAME,
@@ -97,7 +98,7 @@ const Title = () => {
         <Schedule>
           {WEDDING_DATE}
           <br />
-          {WEDDING_LOCATION}
+          {WEDDING_TIME}, {WEDDING_LOCATION}
         </Schedule>
       </TitleWrapper>
       <VideoBackground autoPlay loop muted playsInline={true}>
