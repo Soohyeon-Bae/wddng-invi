@@ -31,7 +31,6 @@ const Title_1 = styled.span`
 
 const Title = styled.span`
   /* font-size: 0.875rem; */
-  font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
 
@@ -178,9 +177,11 @@ const Location = () => {
   const venueName = "노보텔 앰배서더 수원";
   const venueLat = "37.266205"; // 위도
   const venueLng = "126.999863"; // 경도
-  const kakaoMapUrl = `https://map.kakao.com/link/map/${venueName},${venueLat},${venueLng}`; // 웹용 카카오 맵 링크
-  const kakaoAppUrl = `kakaomap://look?p=${venueLat},${venueLng}`; // 카카오맵 앱 바로가기 링크 (딥링크)
+  const venuePlaceId = "11306354"; // 노보텔 앰배서더 수원 고유 ID
 
+  // **변경 지점: 카카오 맵 링크를 장소 ID 기반 '길찾기' 모드로 변경**
+  const kakaoMapUrl = `https://map.kakao.com/link/to/${venueName},${venuePlaceId}`; // PC 웹 및 모바일 웹 링크 (장소 ID 기반 길찾기)
+ 
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
