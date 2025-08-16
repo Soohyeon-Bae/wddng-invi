@@ -70,20 +70,20 @@ const GroomBride = styled.p`
 `;
 
 const Schedule = styled.p`
-  /* font-size: 1.06rem; */
+  /* font-size: 1rem; */
   opacity: 0.65;
   margin-bottom: 24px;
 
-  font-size: 1.44vw;
+  font-size: 1.36vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 4.4vw;
+    font-size: 4.2vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4.9vw;
+    font-size: 4.7vw;
   }
 `;
 const Title = () => {

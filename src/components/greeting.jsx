@@ -82,6 +82,21 @@ const GroomBride = styled.p`
   } 
 `;
 
+const SmallMark = styled.span`
+  font-size: 0.7vw; /* PC에서 MARK에 적합한 작은 크기 */
+  word-break: keep-all; /* 단어 단위로 줄바꿈 유지 */
+  margin-right: 0.2em; /* MARK 뒤에 약간의 간격 추가 (선택 사항) */
+  vertical-align: top; /* 텍스트 상단 정렬 (예: 故가 이름 위에 살짝 붙도록) */
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.8vw; /* 768px 이하 모바일 화면에서의 크기 */
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 3.3vw; /* 480px 이하 좁은 모바일 화면에서의 크기 */
+  }
+`;
+
 const Image = styled.img`
   display: block;
   margin: 0 auto;
@@ -115,7 +130,7 @@ const Greeting = () => {
         <br />
       </Content>
       <GroomBride data-aos="fade-up">
-        {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 장남 {GROOM_NAME}
+        <SmallMark>{MARK}</SmallMark>{GROOM_FATHER_NAME} · <SmallMark>{MARK}</SmallMark>{GROOM_MOTHER_NAME}의 장남 {GROOM_NAME}
         <br />
         {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
       </GroomBride>

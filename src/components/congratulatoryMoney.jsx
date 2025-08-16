@@ -55,59 +55,59 @@ const Title = styled.p`
 `;
 
 const Content = styled.p`
-  /* font-size: 0.875rem; */
+  /* font-size: 0.825rem; */
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 42px;
 
-  font-size: 1.19vw;
+  font-size: 1.12vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.8vw;
+    font-size: 3.6vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4.3vw;
+    font-size: 4.1vw;
   } 
 `;
 
 const SubContent = styled.p`
-  /* font-size: 0.875rem; */
+  /* font-size: 0.825rem; */
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 42px;
   
-  font-size: 1.19vw;
+  font-size: 1.12vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.8vw;
+    font-size: 3.6vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4.3vw;
+    font-size: 4.1vw;
   } 
 `;
 
 const Description = styled.p`
-  /* font-size: 0.875rem; */
+  /* font-size: 0.72rem; */
   line-height: 1.75;
   opacity: 0.65;
   margin-top: 8px;
 
-  font-size: 1.19vw;
+  font-size: 0.98vw;
   word-break: keep-all;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.8vw;
+    font-size: 3.2vw;
     line-height: 1.6;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 4.3vw;
+    font-size: 3.7vw;
   } 
 
 `;
