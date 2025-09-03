@@ -48,7 +48,7 @@ const Image = styled.img`
 
 // 새로 추가된 스타일 컴포넌트
 const CountdownText = styled.p`
-  font-size: 1.5vw;
+  font-size: 1.19vw;
   text-align: center;
   color: var(--title-color);
   margin-top: 40px; /* 기존 컨텐츠와 간격 조절 */
@@ -57,10 +57,10 @@ const CountdownText = styled.p`
   opacity: 0.85;
 
   @media screen and (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 3.8vw;
   }
   @media screen and (max-width: 480px) {
-    font-size: 4.5vw;
+    font-size: 4.3vw;
   }
 `;
 
@@ -81,7 +81,7 @@ const CalendarContainer = styled.div`
 `;
 
 const CalendarHeader = styled.div`
-  font-size: 1.2vw;
+  font-size: 0.98vw;
   font-weight: bold;
   color: var(--title-color);
   text-align: center;
@@ -89,10 +89,10 @@ const CalendarHeader = styled.div`
   opacity: 0.9;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 3.2vw;
   }
   @media screen and (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 3.7vw;
   }
 `;
 
@@ -149,23 +149,6 @@ const DayCell = styled.div`
     background-color: rgba(255, 192, 203, 0.4); /* 연한 분홍색 (반투명) */
     font-weight: bold;
     color: var(--title-color); /* 글자색 유지 */
-  }
-
-  .heart-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2em;
-    color: rgba(217, 125, 131, 0.7); /* 하트 색상 (빨간색에서 살짝 투명도) */
-    opacity: 0.9;
-    pointer-events: none; /* 하트 위로 마우스 이벤트 통과 */
-    z-index: 1; /* 날짜 위로 올라오도록 */
-
-    /* 모바일에서 하트 크기 조절 */
-    @media screen and (max-width: 768px) {
-      font-size: 1.2em;
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -225,11 +208,11 @@ const Quote = () => {
         - Roy Croft, Love -
         <br />
         <br />
-        <br />
       </Content>
 
       {/* 새롭게 추가된 카운트다운 텍스트 */}
       <CountdownText data-aos="fade-up" data-aos-delay="100">
+        <br/>
         호상❤️수현의 결혼식이 <span style={{ color: 'rgba(217, 125, 131, 0.9)' }}>{diffDays}</span>일 남았습니다.
       </CountdownText>
 
@@ -246,7 +229,7 @@ const Quote = () => {
               className={day === null ? "empty" : (day === highlightedDay ? "highlighted" : "")}
             >
               {day}
-              {day === highlightedDay && <span className="heart-icon">❤️</span>}
+              {day === highlightedDay}
             </DayCell>
           ))}
         </CalendarGrid>
