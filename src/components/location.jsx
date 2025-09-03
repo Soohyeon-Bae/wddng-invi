@@ -225,8 +225,9 @@ const Location = () => {
         // target="_blank" // onClick으로 제어하므로 이 속성은 불필요하거나 제거하는 것이 좋습니다.
         rel="noopener noreferrer" // 보안을 위한 설정
         aria-label={`${venueName} 지도 보기`} // 스크린 리더를 위한 설명
-        onClick={handleMapClick} {/* <-- 중요한 수정! 이 부분에 이벤트 핸들러를 연결합니다. */}
+        onClick={handleMapClick} 
       >
+        {/* <-- 중요한 수정! 이 부분에 이벤트 핸들러를 연결합니다. */}
         <div
           id="daumRoughmapContainer1752994469016" // 이 ID는 Roughmap 퍼가기 코드에 있는 것과 일치해야 합니다.
           className="root_daum_roughmap root_daum_roughmap_landing"
