@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { Divider } from "antd";
+import { Divider } from "antd"; // Ant Design의 Divider를 사용하고 계시는 것 같습니다.
 import styled from "styled-components";
-import Flower from "../assets/flower2.png";
+import Flower from "../assets/flower2.png"; // 이미지 경로 확인
 
+// styled-components 정의 (이전 코드에서 제공해주신 내용)
 const Wrapper = styled.div`
   padding-top: 42px;
   width: 70%;
@@ -10,12 +11,10 @@ const Wrapper = styled.div`
 `;
 
 const Title_1 = styled.span`
-  /* font-size: 1rem; */
   font-weight: bold;
   color: var(--title-color);
   opacity: 0.85;
   margin-bottom: 0;
-
   font-size: 1.36vw;
   word-break: keep-all;
 
@@ -30,10 +29,8 @@ const Title_1 = styled.span`
 `;
 
 const Title = styled.span`
-  /* font-size: 0.875rem; */
   opacity: 0.85;
   margin-bottom: 0;
-
   font-size: 1.19vw;
   word-break: keep-all;
 
@@ -48,12 +45,10 @@ const Title = styled.span`
 `;
 
 const Highlight = styled.span`
-  /* font-size: 0.875rem; */
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
-
   font-size: 1.19vw;
   word-break: keep-all;
 
@@ -75,14 +70,12 @@ const Image = styled.img`
 `;
 
 const Content = styled.p`
-  /* font-size: 0.72rem; */
   line-height: 1.75;
   opacity: 0.75;
   width: 100%;
   text-align: center;
   padding-top: 32px;
   margin-bottom: 16px;
-
   font-size: 0.98vw;
   word-break: keep-all;
 
@@ -115,120 +108,127 @@ const MapContainerLink = styled.a` /* <a> 태그를 감쌀 스타일드 컴포�
 
 
 const Location = () => {
-  // 카카오 맵 불러오기
-
-  // <!-- 3. 실행 스크립트 -->
+  // Roughmap 실행 스크립트
   const executeScript = () => {
-    // 맵 스크립트가 로드되었는지 확인 후 실행
     if (window.daum && window.daum.roughmap && window.daum.roughmap.Lander) {
       new window.daum.roughmap.Lander({
-        "timestamp" : "1752994469016",
-        "key" : "t5chefvcj94",
-        "mapWidth" : "640",
-        "mapHeight" : "360"
+        "timestamp": "1752994469016", // 이 값과 key는 퍼가려는 특정 지도와 일치해야 합니다.
+        "key": "t5chefvcj94",
+        "mapWidth": "640",
+        "mapHeight": "360"
       }).render();
     } else {
-      console.error("Kakao Roughmap script not loaded yet.");
+      console.error("Kakao Roughmap script not loaded yet or Lander object is not available.");
     }
   };
 
-  // <!-- 2. 설치 스크립트 * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다. -->
+  // Roughmap 설치 스크립트 (중복 로딩 방지 로직 개선)
   const InstallScript = () => {
-    (function () {
-      let c = window.location.protocol === "https:" ? "https:" : "http:";
-      let a = "16137cec";
+    const scriptId = "kakao-roughmap-lander-script"; // 스크립트 중복 방지를 위한 고유 ID
 
-      if (window.daum && window.daum.roughmap && window.daum.roughmap.cdn) {
-        // 이미 스크립트가 삽입되었다면 다시 삽입하지 않음
-        executeScript(); // 스크립트가 이미 로드된 경우 바로 맵 렌더링 시도
-        return;
-      }
-      
-      window.daum = window.daum || {};
-      window.daum.roughmap = {
-        cdn: a,
-        URL_KEY_DATA_LOAD_PRE: c + "//t1.daumcdn.net/roughmap/",
-        url_protocal: c,
-      };
-      let b =
-        c +
-        "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
-        a +
-        "/roughmapLander.js";
+    if (document.getElementById(scriptId)) {
+      // 스크립트가 이미 DOM에 존재하면 다시 추가하지 않고 실행 함수 호출
+      executeScript();
+      return;
+    }
+    
+    let protocol = window.location.protocol === "https:" ? "https:" : "http:";
+    let cdnKey = "16137cec"; // 다음 로드맵 CDN 키
 
-      // document.write -> doumnet.body.append로 수정
-      const scriptTag = document.createElement("script");
-      scriptTag.src = b;
-      document.body.append(scriptTag);
-      scriptTag.onload = () => {
-        executeScript();
-      };
-      scriptTag.onerror = () => {
-        console.error("Failed to load Kakao Roughmap script.");
-      };
-    })();
+    // window.daum.roughmap 객체가 정의되지 않았다면 초기화
+    window.daum = window.daum || {};
+    window.daum.roughmap = window.daum.roughmap || { // 기존 속성 덮어쓰지 않도록 개선
+      cdn: cdnKey,
+      URL_KEY_DATA_LOAD_PRE: protocol + "//t1.daumcdn.net/roughmap/",
+      url_protocal: protocol,
+    };
+    
+    let scriptSrc =
+      protocol +
+      "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
+      cdnKey +
+      "/roughmapLander.js";
+
+    const scriptTag = document.createElement("script");
+    scriptTag.src = scriptSrc;
+    scriptTag.id = scriptId; // 스크립트 ID 할당
+    scriptTag.async = true; // 비동기 로딩으로 페이지 렌더링에 영향 최소화
+    document.body.append(scriptTag); // body에 스크립트 추가
+
+    scriptTag.onload = () => {
+      executeScript(); // 스크립트 로드 완료 후 지도 실행
+    };
+    scriptTag.onerror = () => {
+      console.error("Failed to load Kakao Roughmap script.");
+    };
   };
 
+  // 컴포넌트 마운트 시 스크립트 설치 및 지도 실행
   useEffect(() => {
     InstallScript();
-  }, []); // 의존성 배열에 InstallScript를 추가하지 않습니다. 함수가 리렌더링될 때마다 새로운 함수를 생성하기 때문입니다.
 
-  // 노보텔 앰배서더 수원 주소와 좌표
+    // 컴포넌트 언마운트 시 Roughmap이 남긴 흔적(script, div 내용)을 정리하는 로직 (선택 사항)
+    return () => {
+        const roughmapDiv = document.getElementById('daumRoughmapContainer1752994469016');
+        if (roughmapDiv) {
+            roughmapDiv.innerHTML = ''; // 내부 HTML 비워서 메모리 누수 방지
+        }
+        const script = document.getElementById('kakao-roughmap-lander-script');
+        if (script) {
+            script.remove(); // 추가했던 스크립트 태그 제거
+        }
+    };
+  }, []); // 의존성 배열을 비워 컴포넌트 마운트 시 한 번만 실행되도록 함
+
+  // 노보텔 앰배서더 수원 정보
   const venueName = "노보텔 앰배서더 수원";
-  const venueLat = "37.266205"; // 위도
-  const venueLng = "126.999863"; // 경도
-  const venuePlaceId = "11306354"; // 노보텔 앰배서더 수원 고유 ID
+  // Roughmap 퍼가기 방식은 자체적으로 위치를 포함하고 있으므로,
+  // venueLat, venueLng, venuePlaceId는 roughmap 퍼가기 코드 자체에 들어있고,
+  // 여기서는 클릭 시 앱/웹 링크 생성에만 활용됩니다.
+  // const venueLat = "37.266205";
+  // const venueLng = "126.999863";
+  // const venuePlaceId = "11306354"; 
 
-  // **변경 지점: 카카오 맵 링크를 장소 ID 기반 '길찾기' 모드로 변경**
+  // 카카오 맵 웹 페이지로 이동할 URL (장소 검색 기반)
   const kakaoMapUrl = `https://map.kakao.com/link/search/${encodeURIComponent(venueName)}`;
  
-  // 모바일 앱에서 직접 열릴 카카오맵 딥링크 검색 URL
+  // 모바일 앱에서 직접 열릴 카카오맵 딥링크 (장소 검색 기반)
   const kakaoMapAppUrl = `kakaomap://search?q=${encodeURIComponent(venueName)}`;
 
-  // 맵 클릭 시 실행될 함수
+  // 맵 클릭 시 실행될 함수: 앱 실행 시도 후 웹으로 폴백
   const handleMapClick = (e) => {
-    e.preventDefault(); // 기본 링크 동작 방지 (새 탭 열림 방지)
+    e.preventDefault(); // 기본 링크 동작 (새 탭 열림) 방지
 
     // 1. 딥링크로 앱 실행 시도
     window.location.href = kakaoMapAppUrl;
 
     // 2. 일정 시간 후 앱이 열리지 않으면 웹 페이지로 리다이렉트 (폴백)
-    // 모바일 브라우저 환경에서 앱이 없거나 앱으로 연결되지 않을 경우를 대비
     const fallbackTimeout = setTimeout(() => {
-      window.location.href = kakaoMapWebUrl;
+      window.location.href = kakaoMapUrl; // <-- `kakaoMapWebUrl` 대신 `kakaoMapUrl`로 수정
     }, 1500); // 1.5초 후에도 앱이 열리지 않으면 웹으로 이동
 
-    // 앱이 실행되면 이 setTimeout을 클리어할 수는 없지만,
-    // 대부분의 경우 앱이 열리면 브라우저는 백그라운드로 가므로 크게 문제되지 않습니다.
+    // 참고: 앱이 실행되면 브라우저는 백그라운드로 이동하기 때문에
+    // 이 setTimeout이 실행되는 것을 직접적으로 취소하기는 어렵습니다.
+    // 하지만 사용자 경험상 큰 문제는 없습니다.
   };
-  
+
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title_1>오시는 길</Title_1>
       </Divider>
-      <Image src={Flower} />
+      <Image src={Flower} alt="웨딩 꽃 장식 이미지" /> {/* alt 속성 추가 권장 */}
       
       {/* 맵을 감싸는 링크 (웹으로 이동 우선) */}
-      {/* 딥링크를 지원하려면 navigator.userAgent를 이용한 조건부 렌더링이 필요하지만, 여기서는 웹 링크를 기본으로 하고 
-          앱에서 자동으로 열리기를 기대하거나, 사용자가 브라우저에서 '앱에서 열기'를 선택하도록 유도합니다. */}
       <MapContainerLink 
-        href={kakaoMapUrl} // 웹 브라우저에서 열릴 카카오 맵 URL
-        target="_blank" // 새 탭 또는 새 창으로 열기
+        href="" // onClick 핸들러로 동작을 제어하므로 href를 비워둡니다.
+        // target="_blank" // onClick으로 제어하므로 이 속성은 불필요하거나 제거하는 것이 좋습니다.
         rel="noopener noreferrer" // 보안을 위한 설정
         aria-label={`${venueName} 지도 보기`} // 스크린 리더를 위한 설명
-        // 모바일 환경에서 앱으로 바로 열리게 하려면 아래 딥링크를 시도할 수 있지만, 
-        // 앱이 설치되어 있지 않은 경우 오류가 발생할 수 있으므로 일반적으로 웹 링크를 fallback으로 사용합니다.
-        // onClick={(e) => { 
-        //   e.preventDefault(); 
-        //   window.location.href = kakaoAppUrl; // 앱 시도
-        //   setTimeout(() => { // 일정 시간 후 앱으로 열리지 않으면 웹으로 리다이렉트
-        //     window.location.href = kakaoMapUrl;
-        //   }, 1000); 
-        // }}
+        onClick={handleMapClick} {/* <-- 중요한 수정! 이 부분에 이벤트 핸들러를 연결합니다. */}
       >
         <div
-          id="daumRoughmapContainer1752994469016"
+          id="daumRoughmapContainer1752994469016" // 이 ID는 Roughmap 퍼가기 코드에 있는 것과 일치해야 합니다.
           className="root_daum_roughmap root_daum_roughmap_landing"
         ></div>
       </MapContainerLink>
