@@ -85,7 +85,7 @@ const Share = () => {
         container: "#sendKakao",
         content: {
           title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
-          description: "직접 만들었습니다. 아래 '청첩장 열기'를 눌러 읽어주세요🤵👰",
+          description: "귀한 걸음 하시어 저희의 새로운 시작을 축복해주시면 감사하겠습니다.🤵👰",
           imageUrl: KAKAOTALK_SHARE_IMAGE,
           link: {
             mobileWebUrl: window.location.href,
