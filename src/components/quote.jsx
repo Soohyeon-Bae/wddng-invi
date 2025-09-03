@@ -48,7 +48,6 @@ const Image = styled.img`
 
 // 새로 추가된 스타일 컴포넌트
 const CountdownText = styled.p`
-  font-family: "mom_to_daughter"; /* 기존 Quote 텍스트와 같은 폰트 사용 */
   font-size: 1.5vw;
   text-align: center;
   color: var(--title-color);
@@ -82,7 +81,6 @@ const CalendarContainer = styled.div`
 `;
 
 const CalendarHeader = styled.div`
-  font-family: "mom_to_daughter";
   font-size: 1.2vw;
   font-weight: bold;
   color: var(--title-color);
@@ -105,7 +103,6 @@ const CalendarGrid = styled.div`
 `;
 
 const DayOfWeek = styled.div`
-  font-family: "mom_to_daughter";
   font-size: 1vw;
   text-align: center;
   color: var(--title-color);
@@ -130,7 +127,6 @@ const DayOfWeek = styled.div`
 `;
 
 const DayCell = styled.div`
-  font-family: "mom_to_daughter";
   font-size: 1.1vw;
   height: 40px; /* 셀 높이 고정 */
   display: flex;
@@ -185,7 +181,7 @@ const DayCell = styled.div`
 const Quote = () => {
   // 1. 남은 일수 계산
   // 현재 날짜를 2025년 9월 3일 오후 12시 56분 53초로 고정
-  const today = new Date('2025-09-03T12:56:53');
+  const today = new Date();
   const weddingDate = new Date('2025-12-21T00:00:00'); // 결혼 날짜 (12월 21일)
   
   // 날짜 간의 차이 계산 (밀리초 단위)
@@ -229,11 +225,12 @@ const Quote = () => {
         - Roy Croft, Love -
         <br />
         <br />
+        <br />
       </Content>
 
       {/* 새롭게 추가된 카운트다운 텍스트 */}
       <CountdownText data-aos="fade-up" data-aos-delay="100">
-        호상&수현의 결혼식이 <span style={{ color: 'rgba(217, 125, 131, 0.9)' }}>{diffDays}</span>일 남았습니다.
+        호상❤️수현의 결혼식이 <span style={{ color: 'rgba(217, 125, 131, 0.9)' }}>{diffDays}</span>일 남았습니다.
       </CountdownText>
 
       {/* 새롭게 추가된 달력 */}
