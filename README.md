@@ -5,7 +5,8 @@ It includes custom modifications for my upcoming winter wedding ceremony.
 This fork includes the following changes compared to the original project:
 - **Interactive Photo Album**: Implemented a responsive lightbox/modal pop-up feature for the photo album, allowing images to display dynamically on top of the current page upon click, with the background subtly dimmed.
 - **Dynamic Snowfall Effect**: Introduced a subtle yet dynamic snowfall visual effect across the application for an enhanced aesthetic experience.
-  
+- **Map Linking**: Implemented a direct link feature to the specified location on Kakao Map.
+
 ---
 
 # 모바일 청첩장 React.js 템플릿
